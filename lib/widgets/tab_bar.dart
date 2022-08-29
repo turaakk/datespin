@@ -1,4 +1,5 @@
 import 'package:datespin/providers/selected_tab.dart';
+import 'package:datespin/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -21,7 +22,7 @@ class _AppTabBarState extends ConsumerState<AppTabBar> {
         overlayColor: MaterialStateProperty.all(Colors.white),
         labelPadding: const EdgeInsets.all(0),
         indicatorColor: Colors.transparent,
-        unselectedLabelColor: const Color(0xFFFF0099),
+        unselectedLabelColor: pinkSecondary,
         labelStyle: const TextStyle(
           fontSize: 20,
         ),
@@ -36,14 +37,14 @@ class _AppTabBarState extends ConsumerState<AppTabBar> {
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
             ),
-            color: selectedTab == 0 ? const Color(0xFFFF0099) : Colors.white,
+            color: selectedTab == 0 ? pinkSecondary : Colors.white,
             child: const Text('Dates'),
           ),
           Container(
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
             ),
-            color: selectedTab == 1 ? const Color(0xFFFF0099) : Colors.white,
+            color: selectedTab == 1 ? pinkSecondary : Colors.white,
             child: const Text('History'),
           ),
           Hero(
@@ -52,7 +53,7 @@ class _AppTabBarState extends ConsumerState<AppTabBar> {
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              color: selectedTab == 2 ? const Color(0xFFFF0099) : Colors.white,
+              color: selectedTab == 2 ? pinkSecondary : Colors.white,
               child: const Text('Settings'),
             ),
           ),

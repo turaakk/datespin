@@ -2,6 +2,7 @@ import 'package:animations/animations.dart';
 import 'package:datespin/pages/settings.dart';
 import 'package:datespin/providers/dates.dart';
 import 'package:datespin/providers/selected_tab.dart';
+import 'package:datespin/theme/colors.dart';
 import 'package:datespin/widgets/tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -71,11 +72,11 @@ class _DateSpinState extends ConsumerState<DateSpin> {
                                 horizontal: 10,
                               ),
                               decoration: BoxDecoration(
-                                color: const Color(0xFFFF0099),
+                                color: pinkSecondary,
                                 borderRadius: BorderRadius.circular(10),
                                 border: Border.all(
                                   width: 3,
-                                  color: const Color(0xFFFF005C),
+                                  color: pinkPrimary,
                                 ),
                               ),
                               child: Row(
