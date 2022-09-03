@@ -3,6 +3,7 @@ import 'package:datespin/pages/settings.dart';
 import 'package:datespin/providers/dates.dart';
 import 'package:datespin/providers/selected_tab.dart';
 import 'package:datespin/theme/colors.dart';
+import 'package:datespin/widgets/add_date_card.dart';
 import 'package:datespin/widgets/tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -25,6 +26,7 @@ class _DateSpinState extends ConsumerState<DateSpin> {
       child: DefaultTabController(
         length: 3,
         child: Scaffold(
+          backgroundColor: pinkSenary,
           body: SingleChildScrollView(
             child: selectedTab == 2
                 ? SizedBox(
@@ -41,27 +43,7 @@ class _DateSpinState extends ConsumerState<DateSpin> {
                               showModal(
                                 context: context,
                                 builder: (context) {
-                                  return Center(
-                                    child: Container(
-                                      margin: const EdgeInsets.all(20),
-                                      padding: const EdgeInsets.all(20),
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(25),
-                                      ),
-                                      child: Material(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(25),
-                                        child: SingleChildScrollView(
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: const [],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  );
+                                  return const AddDateCard();
                                 },
                               );
                             },

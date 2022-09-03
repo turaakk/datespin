@@ -37,14 +37,14 @@ class _AppTabBarState extends ConsumerState<AppTabBar> {
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
             ),
-            color: selectedTab == 0 ? pinkSecondary : Colors.white,
+            color: selectedTab == 0 ? pinkSecondary : pinkSenary,
             child: const Text('Dates'),
           ),
           Container(
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
             ),
-            color: selectedTab == 1 ? pinkSecondary : Colors.white,
+            color: selectedTab == 1 ? pinkSecondary : pinkSenary,
             child: const Text('History'),
           ),
           Hero(
@@ -53,7 +53,7 @@ class _AppTabBarState extends ConsumerState<AppTabBar> {
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              color: selectedTab == 2 ? pinkSecondary : Colors.white,
+              color: selectedTab == 2 ? pinkSecondary : pinkSenary,
               child: const Text('Settings'),
             ),
           ),
